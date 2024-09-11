@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "SetOfPokemon.hpp"
 
@@ -7,6 +7,6 @@ private:
 
 public:
     Pokeball();
-    ~Pokeball();
+
 };
 
