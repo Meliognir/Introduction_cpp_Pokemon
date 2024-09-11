@@ -1,0 +1,20 @@
+# ninja log v6
+2	1154	1726058541245763370	CMakeFiles/untitled.dir/main.cpp.o	44bcc5efd98b99b
+1477	1573	1726058542721727521	untitled	6fc75f70490785fe
+4	1100	1726058541247763322	CMakeFiles/untitled.dir/Pokemon.cpp.o	608bcc01dcb1b67b
+4	1163	1726058541247763322	CMakeFiles/untitled.dir/SetOfPokemon.cpp.o	f80976cd37622fc
+8	1476	1726058541251763225	CMakeFiles/untitled.dir/Pokedex.cpp.o	ef15de439a3cba31
+3	443	1726058982414284251	CMakeFiles/untitled.dir/Pokeball.cpp.o	e8c634bb87e34a12
+1	655	1726058982412284297	CMakeFiles/untitled.dir/main.cpp.o	44bcc5efd98b99b
+655	754	1726058983065269051	untitled	aa3a3a25ea6168ca
+2	614	1726059508170952139	CMakeFiles/untitled.dir/SetOfPokemon.cpp.o	f80976cd37622fc
+616	701	1726059508787915042	untitled	aa3a3a25ea6168ca
+2	526	1726059601532552097	CMakeFiles/untitled.dir/main.cpp.o	44bcc5efd98b99b
+527	617	1726059602057522918	untitled	aa3a3a25ea6168ca
+2	706	1726059633979769286	CMakeFiles/untitled.dir/main.cpp.o	44bcc5efd98b99b
+706	811	1726059634684731052	untitled	aa3a3a25ea6168ca
+7	725	1726059677454448548	CMakeFiles/untitled.dir/main.cpp.o	44bcc5efd98b99b
+725	822	1726059678172410842	untitled	aa3a3a25ea6168ca
+3	622	1726059946593476737	CMakeFiles/untitled.dir/Pokeball.cpp.o	e8c634bb87e34a12
+2	789	1726059946592476782	CMakeFiles/untitled.dir/main.cpp.o	44bcc5efd98b99b
+791	939	1726059947381441632	untitled	aa3a3a25ea6168ca
