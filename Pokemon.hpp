@@ -31,6 +31,8 @@ public:
 
     int getId();
 
+    int getHP();
+
     static int getNumberOfPokemon();
     ~Pokemon();
 };

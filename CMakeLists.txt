@@ -7,4 +7,7 @@ add_executable(untitled main.cpp
         Pokemon.cpp
         SetOfPokemon.cpp
         Pokedex.cpp
-        Pokeball.cpp)
+        Pokeball.cpp
+        PokemonParty.cpp
+        Game.cpp
+        )

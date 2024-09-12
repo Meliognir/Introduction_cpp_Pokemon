@@ -60,3 +60,7 @@ string Pokemon::getName(){
 int Pokemon::getId(){
     return id;
 }
+
+int Pokemon::getHP(){
+    return hitPoint;
+}

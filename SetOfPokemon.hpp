@@ -7,8 +7,8 @@
 class SetOfPokemon {
 protected:
     std::vector<Pokemon*> arrayOfPokemon;
-    int findOnePokemonByName(string &name);
-    int findOnePokemonById(int id);
+    int findOnePokemonByName(const string &name) const;
+    int findOnePokemonById(int id) const;
 public:
     virtual Pokemon * getOnePokemonByName(string name)=0;
     virtual Pokemon * getOnePokemonById(int id)=0;
