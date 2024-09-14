@@ -11,8 +11,6 @@ public :
 
     void InitGame();
 
-    void lanceCombatSauvage(PokemonParty &pokemon_party);
-
     void choixPokParty();
 
     void lanceCombatDresseur();

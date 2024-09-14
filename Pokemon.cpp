@@ -10,14 +10,14 @@ int Pokemon::numberOfPokemon=0;
 
 Pokemon::Pokemon(const string &name, int id, double hitPoint, double attack, double defense, int generation) : name(
         name), id(id), hitPoint(hitPoint), attackValue(attack), defense(defense), generation(generation) {
-    std::cout << "Ici le constructeur de " << name << std::endl;
+
     numberOfPokemon++;
 }
 
 Pokemon::Pokemon(const Pokemon& anotherPokemon) : name(anotherPokemon.name),id(anotherPokemon.id),
         hitPoint(anotherPokemon.hitPoint), attackValue(anotherPokemon.attackValue), defense(anotherPokemon.defense),
         generation(anotherPokemon.generation){
-    std::cout<<"Recopie de " << name <<std::endl;
+
     numberOfPokemon++;
 }
 
@@ -31,12 +31,13 @@ void Pokemon::displayInfo(){
 }
 
 Pokemon::~Pokemon() {
-    std::cout << "Ici le destructeur" << std::endl;
+
 }
 
 void Pokemon::attack(Pokemon &anotherPokemon) {
-    if (this->attackValue > anotherPokemon.defense){
-        anotherPokemon.sustainDamage(int (this->attackValue-anotherPokemon.defense));
+    srand(time(NULL));
+    if (rand() % 100 >=20){
+        anotherPokemon.sustainDamage(int (abs(this->attackValue-anotherPokemon.defense)));
     }
     else{
         std::cout << "Attack missed ! " << std::endl;

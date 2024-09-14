@@ -6,6 +6,7 @@
 PokemonParty::PokemonParty(const std::vector<int>& combatPokemon,Pokeball * pokeball) : linkedPokeball (pokeball) {
     if(combatPokemon.size()>6) {
         std::cout<<"Vous avez trop de Pokemon dans votre équipe."<< std::endl;
+        std::__throw_bad_exception();
     }
     for(const int id : combatPokemon) {
         Pokemon * pokemon = linkedPokeball->getOnePokemonById(id);
@@ -15,6 +16,18 @@ PokemonParty::PokemonParty(const std::vector<int>& combatPokemon,Pokeball * poke
     }
 }
 
+void PokemonParty::setOnePokemonInPokeball(int id){
+
+    Pokemon* test = Pokedex::getInstance()->getOnePokemonById(id);
+    arrayOfPokemon.push_back(test);
+
+}
+
+Pokemon *PokemonParty::getOnePokemonByIndex(int i) {
+    Pokemon * toReturn = arrayOfPokemon.at(i);
+    this->arrayOfPokemon.erase(arrayOfPokemon.begin()+i);
+    return toReturn;
+}
 
 
 

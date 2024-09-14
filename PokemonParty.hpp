@@ -13,11 +13,14 @@ class PokemonParty : virtual public SetOfPokemon{
 
         PokemonParty(const std::vector<int>& combatPokemon, Pokeball * pokeball);
 
+        void setOnePokemonInPokeball(int id);
+
         Pokemon * getOnePokemonById(int id) override;
 
         Pokemon * getOnePokemonByName(string name) override;
 
-        Pokemon * getOnePokemonByName(int id);
+        Pokemon * getOnePokemonByIndex(int i);
+
 
         void setOnePokemonInPokemonParty(Pokemon *pokemon);
 

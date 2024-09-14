@@ -10,4 +10,5 @@ add_executable(untitled main.cpp
         Pokeball.cpp
         PokemonParty.cpp
         Game.cpp
-        )
+        Combat.cpp
+)

@@ -15,82 +15,27 @@ void Game::InitGame() {
     PokemonParty pokemon_party (ids, &pokeball);
 
     string choixA;
-    std::cout << "Voulez-vous lancer le jeu ? [Y/N]"<< std::endl;
-    std::cin>>choixA;
-    if(choixA=="Y") {
-        string choixB;
-        std::cout << "Rentrez votre pseudo : "<< std::endl;
-        std::cin>>choixB;
-        std::cout << "C'est parti, "<< choixB << " !"<<std::endl;
-    }
-        /*std::cout << "Certains pokemons vous ont été donné vous pouvez allez vous battre,"
-                     "êtes vous prêt ? [Y/N]"<< std::endl;
-        std::cin>>choixB;
-        if(choixB=="Y") {
-            lanceCombatSauvage(pokemon_party);
-
-        }else {
-            std::cout << " Si vous n'êtes pas prêt quitter le jeu :), le combat va se lancer maintenant :" <<std::endl;
-            lanceCombatSauvage(pokemon_party);
+    while(choixA!="Y" ||choixA!="N") {
+        if(choixA!="Y" ||choixA!="N"){
+        std::cout << "Voulez-vous lancer le jeu ? [Y/N]"<< std::endl;
+        std::cin>>choixA;
         }
-    }*/
-    if(choixA=="N") {
+        if(choixA=="Y") {
+            string choixB;
+            std::cout << "Rentrez votre pseudo : "<< std::endl;
+            std::cin>>choixB;
+            std::cout << "C'est parti, "<< choixB << " !"<<std::endl;
+            break;
+        }
+
+        if(choixA=="N") {
+            std::abort(); //apparemment à éviter parce que trop violent
+        }
+
     }
+
+
 }
-
-void Game::lanceCombatSauvage(PokemonParty &pokemon_party) {
-    //instances
-    int index=0;
-    Pokedex *pokedexInstance=Pokedex::getInstance();
-    Pokeball pokeball;
-
-    srand(time(NULL));
-    int id=(rand()%720)+1;
-    Pokemon * PokAdver= pokedexInstance->getOnePokemonById(id);
-    std::cout << "Vous avez rencontré un "<< PokAdver->getName()<< " sauvage." <<std::endl;
-
-    int choix1;
-    std::cout << "Quel pokemon voulez-vous envoyer au combat (taper l'ID du pokemon) ?"<< std::endl;
-    std::cout << "Vos Pokemon sont : " << std::endl;
-    pokeball.displayList();
-
-    std::cin>>choix1;
-    std::cout << "Vous avez envoyé"<< choix1 << " au combat" <<std::endl;
-    Pokemon * myPokemon=Pokedex::getInstance()->getOnePokemonById(choix1);
-    while(PokAdver->getHP()>=0 || myPokemon->getHP()>=0){
-        string choix2;
-        std::cout << "Voulez-vous attaquer ou capturer ? [Att/Capt]"<< std::endl;
-        std::cin>>choix2;
-        if(choix2=="Att") {
-
-            myPokemon->attack(*PokAdver);
-            PokAdver->attack(*myPokemon);
-            if (PokAdver->getHP()>=0 && myPokemon->getHP()<=0) {
-                std::cout << "You LOSE !" << std::endl;
-                break;
-            }
-            if (PokAdver->getHP()<=0 && myPokemon->getHP()>=0) {
-                std::cout << "You WIN !" << std::endl;
-                break;
-            }
-        }
-        if(choix2=="Capt") {
-            if(rand() % 100 >=20){
-                std::cout << "Vous avez capturé " << PokAdver->getName() << std::endl;
-                pokeball.setOnePokemonInPokeballByName(PokAdver->getName());
-                break;
-            }
-            else {
-                std::cout << "Vous avez raté " << PokAdver->getName()<< std::endl;
-
-            }
-        }
-    }
-
-
-    //pokemon_party.arrayOfPokemon().push_back(choix1);
-}
-
 
 
 /*

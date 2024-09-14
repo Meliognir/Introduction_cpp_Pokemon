@@ -91,6 +91,12 @@ build CMakeFiles/untitled.dir/Game.cpp.o: CXX_COMPILER__untitled_unscanned_Debug
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir
 
+build CMakeFiles/untitled.dir/Combat.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/trias/CLionProjects/untitled/Combat.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/Combat.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target untitled
@@ -99,7 +105,7 @@ build CMakeFiles/untitled.dir/Game.cpp.o: CXX_COMPILER__untitled_unscanned_Debug
 #############################################
 # Link the executable untitled
 
-build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.o CMakeFiles/untitled.dir/Pokemon.cpp.o CMakeFiles/untitled.dir/SetOfPokemon.cpp.o CMakeFiles/untitled.dir/Pokedex.cpp.o CMakeFiles/untitled.dir/Pokeball.cpp.o CMakeFiles/untitled.dir/PokemonParty.cpp.o CMakeFiles/untitled.dir/Game.cpp.o
+build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.o CMakeFiles/untitled.dir/Pokemon.cpp.o CMakeFiles/untitled.dir/SetOfPokemon.cpp.o CMakeFiles/untitled.dir/Pokedex.cpp.o CMakeFiles/untitled.dir/Pokeball.cpp.o CMakeFiles/untitled.dir/PokemonParty.cpp.o CMakeFiles/untitled.dir/Game.cpp.o CMakeFiles/untitled.dir/Combat.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/untitled.dir
   POST_BUILD = :
